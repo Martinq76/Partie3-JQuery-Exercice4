@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="style.css">
+  <script src="assets\js\jquery-3.3.1.min.js"></script>
+  <title>Partie3 JQuery Exercice4</title>
+</head>
+
+<body>
+  <div id="rectangle"></div>
+  <button type="button" name="button" id="button1">+ 10px</button>
+  <button type="button" name="button" id="button2">Vert</button>
+  <button type="button" name="button" id="button3">Couleur initiale</button>
+  <button type="button" name="button" id="button4">Hide</button>
+  <button type="button" name="button" id="button5">Show</button>
+
+  <script type="text/javascript">
+    $('#button1').click(function() {
+      $('#rectangle').height('+=10');
+      if ($('#rectangle').height() > 100) {
+        $('#rectangle').css('height', '10px');
+      }
+    });
+    $('#button2').click(function() {
+      $('#rectangle').css('background', 'green');
+    });
+    $('#button3').click(function() {
+      $('#rectangle').css('background', 'blue');
+    });
+    $('#button4').click(function() {
+      $('#rectangle').hide();
+    });
+    $('#button5').click(function() {
+      $('#rectangle').show();
+    });
+  </script>
+</body>
+
+</html>
